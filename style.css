@@ -1,0 +1,123 @@
+:root {
+  font-family: sans-serif;
+}
+
+.backImg {
+  background-image: url(bgImg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+  isolation: isolate;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  padding: 2em;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  margin-top: 1em;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: olivedrab;
+  mix-blend-mode: multiply;
+  border-radius: 2em;
+}
+
+.appLink {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.appLink:hover {
+  border: solid 1px #54bbc2;
+  border-radius: 5px;
+  margin-bottom: -2px;
+  color: #54bbc2;
+}
+
+.textBox {
+  padding: .7em;
+  border: none;
+  border-radius: 1em;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: .5em;
+}
+
+.searchButton {
+  border: none;
+  border-radius: .8em;
+  background-color: whitesmoke;
+}
+
+.searchButton:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.weather {
+  color: #f2e8d9;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .3em;
+}
+
+.city {
+  color: #ffebcc;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading::after {
+  visibility: visible;
+  content: "Loading...";
+  color: #ffebcc;
+  position: absolute;
+}
+/*# sourceMappingURL=style.css.map */
